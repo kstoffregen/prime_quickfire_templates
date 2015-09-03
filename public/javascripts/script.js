@@ -10,15 +10,15 @@ $(document).ready(function(){
             firstName: firstName.value,
             lastName: lastName.value
         };
-
+        console.log(data);
         $.ajax({
             url: '/students',
             type: 'POST',
             data: data
         }).done(function(response, textStatus, jqXHR){
             console.log('Success!');
-            //
-            //var html = template({ student: data })
+
+            ({ student: data })
             //if($this.siblings().length > 1) {
             //    $this.siblings().last().after(html);
             //} else {
